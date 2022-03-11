@@ -2,207 +2,451 @@
   {
     "type": "add_sub_expr",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      },
+      "op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          }
+        ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
     "type": "and_expr",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -214,7 +458,7 @@
     "type": "assign_stmt",
     "named": true,
     "fields": {
-      "assignOp": {
+      "op": {
         "multiple": false,
         "required": true,
         "types": [
@@ -332,884 +576,136 @@
   {
     "type": "comparison_expr",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "contract_defn",
-    "named": true,
     "fields": {
-      "bases": {
-        "multiple": true,
-        "required": false,
+      "lhs": {
+        "multiple": false,
+        "required": true,
         "types": [
           {
-            "type": "extends",
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
             "named": false
           },
           {
-            "type": "ident_list",
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
             "named": true
           }
         ]
       },
-      "body": {
-        "multiple": true,
-        "required": false,
+      "op": {
+        "multiple": false,
+        "required": true,
         "types": [
           {
-            "type": "error_defn_block",
-            "named": true
+            "type": "<",
+            "named": false
           },
           {
-            "type": "error_defn_item",
-            "named": true
+            "type": "<=",
+            "named": false
           },
           {
-            "type": "event_defn_block",
-            "named": true
+            "type": ">",
+            "named": false
           },
           {
-            "type": "event_defn_item",
-            "named": true
-          },
-          {
-            "type": "exec_defn",
-            "named": true
-          },
-          {
-            "type": "instantiate_defn",
-            "named": true
-          },
-          {
-            "type": "migrate_defn",
-            "named": true
-          },
-          {
-            "type": "query_defn",
-            "named": true
-          },
-          {
-            "type": "state_block",
-            "named": true
-          },
-          {
-            "type": "state_item_defn",
-            "named": true
-          },
-          {
-            "type": "state_map_defn",
-            "named": true
-          }
-        ]
-      },
-      "interfaces": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "ident_list",
-            "named": true
-          },
-          {
-            "type": "implements",
+            "type": ">=",
             "named": false
           }
         ]
       },
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "cwscript_src",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "contract_defn",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "directive",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "directive_stmt",
-    "named": true,
-    "fields": {
-      "directive": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "directive",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "else_clause",
-    "named": true,
-    "fields": {
-      "body": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "fn_body",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "else_if_clause",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "if_clause",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "enum_body",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "enum_variant_struct",
-          "named": true
-        },
-        {
-          "type": "enum_variant_tuple",
-          "named": true
-        },
-        {
-          "type": "enum_variant_unit",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "enum_defn",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "enum_body",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "enum_variant_struct",
-    "named": true,
-    "fields": {
-      "members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "struct_member",
-            "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "struct_member",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "enum_variant_tuple",
-    "named": true,
-    "fields": {
-      "members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "builtin_type",
-            "named": true
-          },
-          {
-            "type": "enum_defn",
-            "named": true
-          },
-          {
-            "type": "infer_type",
-            "named": true
-          },
-          {
-            "type": "short_option_type",
-            "named": true
-          },
-          {
-            "type": "short_vec_type",
-            "named": true
-          },
-          {
-            "type": "struct_defn",
-            "named": true
-          },
-          {
-            "type": "tuple_type",
-            "named": true
-          },
-          {
-            "type": "type_alias_defn",
-            "named": true
-          },
-          {
-            "type": "type_path",
-            "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "enum_variant_unit",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "equality_expr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "error_defn_block",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "enum_variant_struct",
-          "named": true
-        },
-        {
-          "type": "enum_variant_tuple",
-          "named": true
-        },
-        {
-          "type": "enum_variant_unit",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "error_defn_item",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "enum_variant_struct",
-          "named": true
-        },
-        {
-          "type": "enum_variant_tuple",
-          "named": true
-        },
-        {
-          "type": "enum_variant_unit",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "event_defn_block",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "enum_variant_struct",
-          "named": true
-        },
-        {
-          "type": "enum_variant_tuple",
-          "named": true
-        },
-        {
-          "type": "enum_variant_unit",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "event_defn_item",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "enum_variant_struct",
-          "named": true
-        },
-        {
-          "type": "enum_variant_tuple",
-          "named": true
-        },
-        {
-          "type": "enum_variant_unit",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "exec_defn",
-    "named": true,
-    "fields": {
-      "args": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "fn_args",
-            "named": true
-          }
-        ]
-      },
-      "body": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "fn_body",
-            "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      },
-      "returnType": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "fn_type",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "fn_arg",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      },
-      "type": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "builtin_type",
-            "named": true
-          },
-          {
-            "type": "enum_defn",
-            "named": true
-          },
-          {
-            "type": "infer_type",
-            "named": true
-          },
-          {
-            "type": "short_option_type",
-            "named": true
-          },
-          {
-            "type": "short_vec_type",
-            "named": true
-          },
-          {
-            "type": "struct_defn",
-            "named": true
-          },
-          {
-            "type": "tuple_type",
-            "named": true
-          },
-          {
-            "type": "type_alias_defn",
-            "named": true
-          },
-          {
-            "type": "type_path",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "fn_args",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "fn_arg",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "fn_body",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "assign_stmt",
-          "named": true
-        },
-        {
-          "type": "directive_stmt",
-          "named": true
-        },
-        {
-          "type": "for_stmt",
-          "named": true
-        },
-        {
-          "type": "if_stmt",
-          "named": true
-        },
-        {
-          "type": "let_stmt",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "fn_call_arg",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      },
-      "value": {
+      "rhs": {
         "multiple": false,
         "required": true,
         "types": [
@@ -1318,7 +814,1154 @@
     }
   },
   {
-    "type": "fn_type",
+    "type": "contract_defn",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_args",
+            "named": true
+          }
+        ]
+      },
+      "bases": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "extends",
+            "named": false
+          },
+          {
+            "type": "ident_list",
+            "named": true
+          }
+        ]
+      },
+      "body": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "enum_variant_struct",
+            "named": true
+          },
+          {
+            "type": "enum_variant_tuple",
+            "named": true
+          },
+          {
+            "type": "enum_variant_unit",
+            "named": true
+          },
+          {
+            "type": "error",
+            "named": false
+          },
+          {
+            "type": "error_defn",
+            "named": true
+          },
+          {
+            "type": "event",
+            "named": false
+          },
+          {
+            "type": "event_defn",
+            "named": true
+          },
+          {
+            "type": "exec",
+            "named": false
+          },
+          {
+            "type": "exec_defn",
+            "named": true
+          },
+          {
+            "type": "fn_args",
+            "named": true
+          },
+          {
+            "type": "fn_body",
+            "named": true
+          },
+          {
+            "type": "fn_return_type",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "instantiate_defn",
+            "named": true
+          },
+          {
+            "type": "migrate_defn",
+            "named": true
+          },
+          {
+            "type": "query",
+            "named": false
+          },
+          {
+            "type": "query_defn",
+            "named": true
+          },
+          {
+            "type": "state",
+            "named": false
+          },
+          {
+            "type": "state_defn",
+            "named": true
+          },
+          {
+            "type": "state_item",
+            "named": true
+          },
+          {
+            "type": "state_map",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          }
+        ]
+      },
+      "interfaces": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "ident_list",
+            "named": true
+          },
+          {
+            "type": "implements",
+            "named": false
+          }
+        ]
+      },
+      "name": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "return_type": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_return_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "cwscript_src",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "contract_defn",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "else_clause",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fn_body",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "else_if_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "if_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "emit_stmt",
+    "named": true,
+    "fields": {
+      "arg": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "enum_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "enum_variant_struct",
+          "named": true
+        },
+        {
+          "type": "enum_variant_tuple",
+          "named": true
+        },
+        {
+          "type": "enum_variant_unit",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_defn",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "enum_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_variant_struct",
+    "named": true,
+    "fields": {
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "struct_member",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "struct_member",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_variant_tuple",
+    "named": true,
+    "fields": {
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "enum_defn",
+            "named": true
+          },
+          {
+            "type": "infer_type",
+            "named": true
+          },
+          {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "enum_variant_unit",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "equality_expr",
+    "named": true,
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      },
+      "op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          }
+        ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "error_defn",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "enum_variant_struct",
+          "named": true
+        },
+        {
+          "type": "enum_variant_tuple",
+          "named": true
+        },
+        {
+          "type": "enum_variant_unit",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "event_defn",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "enum_variant_struct",
+          "named": true
+        },
+        {
+          "type": "enum_variant_tuple",
+          "named": true
+        },
+        {
+          "type": "enum_variant_unit",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exec_defn",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fn_args",
+            "named": true
+          }
+        ]
+      },
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fn_body",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "return_type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_return_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "exec_stmt",
+    "named": true,
+    "fields": {
+      "arg": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "fail_stmt",
+    "named": true,
+    "fields": {
+      "arg": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "fn_arg",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "enum_defn",
+            "named": true
+          },
+          {
+            "type": "infer_type",
+            "named": true
+          },
+          {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "fn_args",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "fn_arg",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fn_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "assign_stmt",
+          "named": true
+        },
+        {
+          "type": "emit_stmt",
+          "named": true
+        },
+        {
+          "type": "exec_stmt",
+          "named": true
+        },
+        {
+          "type": "fail_stmt",
+          "named": true
+        },
+        {
+          "type": "for_stmt",
+          "named": true
+        },
+        {
+          "type": "if_stmt",
+          "named": true
+        },
+        {
+          "type": "let_stmt",
+          "named": true
+        },
+        {
+          "type": "return_stmt",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fn_return_type",
     "named": true,
     "fields": {},
     "children": {
@@ -1592,52 +2235,59 @@
   {
     "type": "ident_binding",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "enum_defn",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "infer_type",
-          "named": true
-        },
-        {
-          "type": "short_option_type",
-          "named": true
-        },
-        {
-          "type": "short_vec_type",
-          "named": true
-        },
-        {
-          "type": "struct_defn",
-          "named": true
-        },
-        {
-          "type": "tuple_type",
-          "named": true
-        },
-        {
-          "type": "type_alias_defn",
-          "named": true
-        },
-        {
-          "type": "type_path",
-          "named": true
-        }
-      ]
+    "fields": {
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "enum_defn",
+            "named": true
+          },
+          {
+            "type": "infer_type",
+            "named": true
+          },
+          {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
+            "named": true
+          }
+        ]
+      },
+      "var_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -1781,7 +2431,7 @@
     "type": "if_stmt",
     "named": true,
     "fields": {
-      "elseClause": {
+      "else_clause": {
         "multiple": false,
         "required": false,
         "types": [
@@ -1791,7 +2441,7 @@
           }
         ]
       },
-      "elseIfClauses": {
+      "else_if_clauses": {
         "multiple": true,
         "required": false,
         "types": [
@@ -1801,7 +2451,7 @@
           }
         ]
       },
-      "ifClause": {
+      "if_clause": {
         "multiple": false,
         "required": true,
         "types": [
@@ -1837,12 +2487,12 @@
           }
         ]
       },
-      "returnType": {
+      "return_type": {
         "multiple": false,
         "required": false,
         "types": [
           {
-            "type": "fn_type",
+            "type": "fn_return_type",
             "named": true
           }
         ]
@@ -1975,7 +2625,7 @@
     "type": "map_key",
     "named": true,
     "fields": {
-      "keyName": {
+      "key_name": {
         "multiple": false,
         "required": false,
         "types": [
@@ -1985,7 +2635,7 @@
           }
         ]
       },
-      "keyType": {
+      "key_type": {
         "multiple": false,
         "required": true,
         "types": [
@@ -2032,104 +2682,123 @@
   {
     "type": "member_access_expr",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      },
+      "member": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2156,12 +2825,12 @@
           }
         ]
       },
-      "returnType": {
+      "return_type": {
         "multiple": false,
         "required": false,
         "types": [
           {
-            "type": "fn_type",
+            "type": "fn_return_type",
             "named": true
           }
         ]
@@ -2171,104 +2840,131 @@
   {
     "type": "mult_div_mod_expr",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
+    "fields": {
+      "lhs": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      },
+      "op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          }
+        ]
+      }
     }
   },
   {
@@ -2277,7 +2973,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "add_sub_expr",
@@ -2297,10 +2993,6 @@
         },
         {
           "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "fn_call_arg",
           "named": true
         },
         {
@@ -2325,6 +3017,10 @@
         },
         {
           "type": "named_args_fn_call_expr",
+          "named": true
+        },
+        {
+          "type": "named_call_arg",
           "named": true
         },
         {
@@ -2379,106 +3075,237 @@
     }
   },
   {
+    "type": "named_call_arg",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "or_expr",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
+    "fields": {
+      "lhs": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2618,12 +3445,12 @@
           }
         ]
       },
-      "returnType": {
+      "return_type": {
         "multiple": false,
         "required": false,
         "types": [
           {
-            "type": "fn_type",
+            "type": "fn_return_type",
             "named": true
           }
         ]
@@ -2633,104 +3460,225 @@
   {
     "type": "query_expr",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
+    "fields": {
+      "arg": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "return_stmt",
+    "named": true,
+    "fields": {
+      "arg": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2828,12 +3776,12 @@
     }
   },
   {
-    "type": "state_block",
+    "type": "state_defn",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "types": [
         {
           "type": "state_item",
@@ -2905,21 +3853,6 @@
     }
   },
   {
-    "type": "state_item_defn",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "state_item",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "state_map",
     "named": true,
     "fields": {
@@ -2988,41 +3921,6 @@
     }
   },
   {
-    "type": "state_map_defn",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "state_map",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "string_char",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "string_val",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "string_char",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "struct_body",
     "named": true,
     "fields": {},
@@ -3066,52 +3964,59 @@
   {
     "type": "struct_member",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "enum_defn",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "infer_type",
-          "named": true
-        },
-        {
-          "type": "short_option_type",
-          "named": true
-        },
-        {
-          "type": "short_vec_type",
-          "named": true
-        },
-        {
-          "type": "struct_defn",
-          "named": true
-        },
-        {
-          "type": "tuple_type",
-          "named": true
-        },
-        {
-          "type": "type_alias_defn",
-          "named": true
-        },
-        {
-          "type": "type_path",
-          "named": true
-        }
-      ]
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "enum_defn",
+            "named": true
+          },
+          {
+            "type": "infer_type",
+            "named": true
+          },
+          {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -3132,52 +4037,63 @@
   {
     "type": "struct_val",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "enum_defn",
-          "named": true
-        },
-        {
-          "type": "infer_type",
-          "named": true
-        },
-        {
-          "type": "short_option_type",
-          "named": true
-        },
-        {
-          "type": "short_vec_type",
-          "named": true
-        },
-        {
-          "type": "struct_defn",
-          "named": true
-        },
-        {
-          "type": "struct_val_member",
-          "named": true
-        },
-        {
-          "type": "tuple_type",
-          "named": true
-        },
-        {
-          "type": "type_alias_defn",
-          "named": true
-        },
-        {
-          "type": "type_path",
-          "named": true
-        }
-      ]
+    "fields": {
+      "members_vals": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "struct_val_member",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "enum_defn",
+            "named": true
+          },
+          {
+            "type": "infer_type",
+            "named": true
+          },
+          {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -3193,347 +4109,489 @@
             "named": true
           }
         ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
     }
   },
   {
     "type": "table_lookup_expr",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
+    "fields": {
+      "index": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      },
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
     "type": "tuple_struct_val",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "enum_defn",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "infer_type",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "short_option_type",
-          "named": true
-        },
-        {
-          "type": "short_vec_type",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_defn",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "tuple_type",
-          "named": true
-        },
-        {
-          "type": "type_alias_defn",
-          "named": true
-        },
-        {
-          "type": "type_path",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
+    "fields": {
+      "member_vals": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "enum_defn",
+            "named": true
+          },
+          {
+            "type": "infer_type",
+            "named": true
+          },
+          {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -3663,310 +4721,341 @@
   {
     "type": "unary_neg_expr",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
+    "fields": {
+      "arg": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
     "type": "unary_not_expr",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
+    "fields": {
+      "arg": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
     "type": "vec_val",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
+    "fields": {
+      "vals": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -3975,10 +5064,6 @@
   },
   {
     "type": "!=",
-    "named": false
-  },
-  {
-    "type": "\"",
     "named": false
   },
   {
@@ -4224,6 +5309,10 @@
   {
     "type": "state",
     "named": false
+  },
+  {
+    "type": "string_val",
+    "named": true
   },
   {
     "type": "struct",
