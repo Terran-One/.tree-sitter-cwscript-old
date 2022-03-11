@@ -458,6 +458,112 @@
     "type": "assign_stmt",
     "named": true,
     "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      },
       "op": {
         "multiple": false,
         "required": true,
@@ -467,105 +573,113 @@
             "named": true
           }
         ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
       }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -846,15 +960,23 @@
         "required": false,
         "types": [
           {
-            "type": "enum_variant_struct",
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "builtin_type",
             "named": true
           },
           {
-            "type": "enum_variant_tuple",
-            "named": true
-          },
-          {
-            "type": "enum_variant_unit",
+            "type": "enum_defn",
             "named": true
           },
           {
@@ -898,6 +1020,10 @@
             "named": true
           },
           {
+            "type": "infer_type",
+            "named": true
+          },
+          {
             "type": "instantiate_defn",
             "named": true
           },
@@ -914,6 +1040,14 @@
             "named": true
           },
           {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
             "type": "state",
             "named": false
           },
@@ -927,6 +1061,26 @@
           },
           {
             "type": "state_map",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "struct_member",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
             "named": true
           },
           {
@@ -953,6 +1107,56 @@
           }
         ]
       },
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "enum_defn",
+            "named": true
+          },
+          {
+            "type": "infer_type",
+            "named": true
+          },
+          {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "struct_member",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
+            "named": true
+          }
+        ]
+      },
       "name": {
         "multiple": true,
         "required": true,
@@ -972,6 +1176,20 @@
             "named": true
           }
         ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
       }
     }
   },
@@ -986,9 +1204,31 @@
         {
           "type": "contract_defn",
           "named": true
+        },
+        {
+          "type": "import_all",
+          "named": true
+        },
+        {
+          "type": "import_items",
+          "named": true
+        },
+        {
+          "type": "interface_defn",
+          "named": true
         }
       ]
     }
+  },
+  {
+    "type": "cwspec_block",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "cwspec_line",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "else_clause",
@@ -1136,55 +1376,6 @@
   {
     "type": "enum_body",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "enum_variant_struct",
-          "named": true
-        },
-        {
-          "type": "enum_variant_tuple",
-          "named": true
-        },
-        {
-          "type": "enum_variant_unit",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "enum_defn",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "enum_body",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "enum_variant_struct",
-    "named": true,
     "fields": {
       "members": {
         "multiple": true,
@@ -1194,42 +1385,6 @@
             "type": ",",
             "named": false
           },
-          {
-            "type": "struct_member",
-            "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "struct_member",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "enum_variant_tuple",
-    "named": true,
-    "fields": {
-      "members": {
-        "multiple": true,
-        "required": false,
-        "types": [
           {
             "type": "builtin_type",
             "named": true
@@ -1255,6 +1410,10 @@
             "named": true
           },
           {
+            "type": "struct_member",
+            "named": true
+          },
+          {
             "type": "tuple_type",
             "named": true
           },
@@ -1269,11 +1428,25 @@
         ]
       },
       "name": {
-        "multiple": false,
-        "required": true,
+        "multiple": true,
+        "required": false,
         "types": [
           {
             "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
             "named": true
           }
         ]
@@ -1281,7 +1454,7 @@
     }
   },
   {
-    "type": "enum_variant_unit",
+    "type": "enum_defn",
     "named": true,
     "fields": {
       "name": {
@@ -1293,7 +1466,31 @@
             "named": true
           }
         ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "enum_body",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -1531,47 +1728,211 @@
   {
     "type": "error_defn",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "enum_variant_struct",
-          "named": true
-        },
-        {
-          "type": "enum_variant_tuple",
-          "named": true
-        },
-        {
-          "type": "enum_variant_unit",
-          "named": true
-        }
-      ]
+    "fields": {
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "enum_defn",
+            "named": true
+          },
+          {
+            "type": "infer_type",
+            "named": true
+          },
+          {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "struct_member",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
     "type": "event_defn",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "enum_variant_struct",
-          "named": true
-        },
-        {
-          "type": "enum_variant_tuple",
-          "named": true
-        },
-        {
-          "type": "enum_variant_unit",
-          "named": true
-        }
-      ]
+    "fields": {
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "enum_defn",
+            "named": true
+          },
+          {
+            "type": "infer_type",
+            "named": true
+          },
+          {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "struct_member",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "exec_decl",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fn_args",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "return_type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_return_type",
+            "named": true
+          }
+        ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -1614,6 +1975,20 @@
         "types": [
           {
             "type": "fn_return_type",
+            "named": true
+          }
+        ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
             "named": true
           }
         ]
@@ -1848,6 +2223,16 @@
     "type": "fn_arg",
     "named": true,
     "fields": {
+      "is_option": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "?",
+            "named": false
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -1926,11 +2311,31 @@
       "required": false,
       "types": [
         {
+          "type": "add_sub_expr",
+          "named": true
+        },
+        {
+          "type": "and_expr",
+          "named": true
+        },
+        {
           "type": "assign_stmt",
           "named": true
         },
         {
+          "type": "comparison_expr",
+          "named": true
+        },
+        {
+          "type": "decimal_val",
+          "named": true
+        },
+        {
           "type": "emit_stmt",
+          "named": true
+        },
+        {
+          "type": "equality_expr",
           "named": true
         },
         {
@@ -1946,7 +2351,19 @@
           "named": true
         },
         {
+          "type": "grouped_expr",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
           "type": "if_stmt",
+          "named": true
+        },
+        {
+          "type": "integer_val",
           "named": true
         },
         {
@@ -1954,7 +2371,67 @@
           "named": true
         },
         {
+          "type": "member_access_expr",
+          "named": true
+        },
+        {
+          "type": "mult_div_mod_expr",
+          "named": true
+        },
+        {
+          "type": "named_args_fn_call_expr",
+          "named": true
+        },
+        {
+          "type": "none_val",
+          "named": true
+        },
+        {
+          "type": "or_expr",
+          "named": true
+        },
+        {
+          "type": "pos_args_fn_call_expr",
+          "named": true
+        },
+        {
+          "type": "query_expr",
+          "named": true
+        },
+        {
           "type": "return_stmt",
+          "named": true
+        },
+        {
+          "type": "string_val",
+          "named": true
+        },
+        {
+          "type": "struct_val",
+          "named": true
+        },
+        {
+          "type": "table_lookup_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_struct_val",
+          "named": true
+        },
+        {
+          "type": "unary_neg_expr",
+          "named": true
+        },
+        {
+          "type": "unary_not_expr",
+          "named": true
+        },
+        {
+          "type": "unit_val",
+          "named": true
+        },
+        {
+          "type": "vec_val",
           "named": true
         }
       ]
@@ -2024,109 +2501,123 @@
             "named": true
           }
         ]
+      },
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fn_body",
+            "named": true
+          }
+        ]
+      },
+      "iterable": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
       }
-    },
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "fn_body",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -2464,6 +2955,129 @@
     }
   },
   {
+    "type": "import_all",
+    "named": true,
+    "fields": {
+      "filepath": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string_val",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "import_item",
+    "named": true,
+    "fields": {
+      "alias": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "symbol": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "import_items",
+    "named": true,
+    "fields": {
+      "filepath": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string_val",
+            "named": true
+          }
+        ]
+      },
+      "symbols": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "import_list",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "import_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "import_item",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "instantiate_decl",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fn_args",
+            "named": true
+          }
+        ]
+      },
+      "return_type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_return_type",
+            "named": true
+          }
+        ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "instantiate_defn",
     "named": true,
     "fields": {
@@ -2496,6 +3110,268 @@
             "named": true
           }
         ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "interface_defn",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_args",
+            "named": true
+          }
+        ]
+      },
+      "bases": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "extends",
+            "named": false
+          },
+          {
+            "type": "ident_list",
+            "named": true
+          }
+        ]
+      },
+      "body": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "enum_defn",
+            "named": true
+          },
+          {
+            "type": "error",
+            "named": false
+          },
+          {
+            "type": "error_defn",
+            "named": true
+          },
+          {
+            "type": "event",
+            "named": false
+          },
+          {
+            "type": "event_defn",
+            "named": true
+          },
+          {
+            "type": "exec",
+            "named": false
+          },
+          {
+            "type": "exec_decl",
+            "named": true
+          },
+          {
+            "type": "fn_args",
+            "named": true
+          },
+          {
+            "type": "fn_return_type",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "infer_type",
+            "named": true
+          },
+          {
+            "type": "instantiate_decl",
+            "named": true
+          },
+          {
+            "type": "migrate_decl",
+            "named": true
+          },
+          {
+            "type": "query",
+            "named": false
+          },
+          {
+            "type": "query_decl",
+            "named": true
+          },
+          {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
+            "type": "state",
+            "named": false
+          },
+          {
+            "type": "state_defn",
+            "named": true
+          },
+          {
+            "type": "state_item",
+            "named": true
+          },
+          {
+            "type": "state_map",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "struct_member",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          }
+        ]
+      },
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "enum_defn",
+            "named": true
+          },
+          {
+            "type": "infer_type",
+            "named": true
+          },
+          {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "struct_member",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "return_type": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_return_type",
+            "named": true
+          }
+        ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
       }
     }
   },
@@ -2516,109 +3392,113 @@
             "named": true
           }
         ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
       }
-    },
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "fn_body",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -2802,6 +3682,46 @@
     }
   },
   {
+    "type": "migrate_decl",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fn_args",
+            "named": true
+          }
+        ]
+      },
+      "return_type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_return_type",
+            "named": true
+          }
+        ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "migrate_defn",
     "named": true,
     "fields": {
@@ -2831,6 +3751,20 @@
         "types": [
           {
             "type": "fn_return_type",
+            "named": true
+          }
+        ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
             "named": true
           }
         ]
@@ -2968,114 +3902,7 @@
     }
   },
   {
-    "type": "named_args_fn_call_expr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "named_call_arg",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "named_call_arg",
+    "type": "named_arg",
     "named": true,
     "fields": {
       "name": {
@@ -3089,6 +3916,143 @@
         ]
       },
       "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "named_args",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "named_arg",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "named_args_fn_call_expr",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "named_args",
+            "named": true
+          }
+        ]
+      },
+      "function": {
         "multiple": false,
         "required": true,
         "types": [
@@ -3309,7 +4273,7 @@
     }
   },
   {
-    "type": "pos_args_fn_call_expr",
+    "type": "pos_args",
     "named": true,
     "fields": {},
     "children": {
@@ -3412,6 +4376,178 @@
     }
   },
   {
+    "type": "pos_args_fn_call_expr",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "pos_args",
+            "named": true
+          }
+        ]
+      },
+      "function": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_sub_expr",
+            "named": true
+          },
+          {
+            "type": "and_expr",
+            "named": true
+          },
+          {
+            "type": "comparison_expr",
+            "named": true
+          },
+          {
+            "type": "decimal_val",
+            "named": true
+          },
+          {
+            "type": "equality_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "grouped_expr",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "integer_val",
+            "named": true
+          },
+          {
+            "type": "member_access_expr",
+            "named": true
+          },
+          {
+            "type": "mult_div_mod_expr",
+            "named": true
+          },
+          {
+            "type": "named_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "none_val",
+            "named": true
+          },
+          {
+            "type": "or_expr",
+            "named": true
+          },
+          {
+            "type": "pos_args_fn_call_expr",
+            "named": true
+          },
+          {
+            "type": "query_expr",
+            "named": true
+          },
+          {
+            "type": "string_val",
+            "named": true
+          },
+          {
+            "type": "struct_val",
+            "named": true
+          },
+          {
+            "type": "table_lookup_expr",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "tuple_struct_val",
+            "named": true
+          },
+          {
+            "type": "unary_neg_expr",
+            "named": true
+          },
+          {
+            "type": "unary_not_expr",
+            "named": true
+          },
+          {
+            "type": "unit_val",
+            "named": true
+          },
+          {
+            "type": "vec_val",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "query_decl",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fn_args",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "return_type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_return_type",
+            "named": true
+          }
+        ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "query_defn",
     "named": true,
     "fields": {
@@ -3451,6 +4587,20 @@
         "types": [
           {
             "type": "fn_return_type",
+            "named": true
+          }
+        ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
             "named": true
           }
         ]
@@ -3778,7 +4928,22 @@
   {
     "type": "state_defn",
     "named": true,
-    "fields": {},
+    "fields": {
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": false,
       "required": true,
@@ -3804,6 +4969,20 @@
         "types": [
           {
             "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
             "named": true
           }
         ]
@@ -3866,6 +5045,20 @@
           }
         ]
       },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
+      },
       "type": {
         "multiple": false,
         "required": true,
@@ -3921,24 +5114,59 @@
     }
   },
   {
-    "type": "struct_body",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "struct_member",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "struct_defn",
     "named": true,
     "fields": {
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "enum_defn",
+            "named": true
+          },
+          {
+            "type": "infer_type",
+            "named": true
+          },
+          {
+            "type": "short_option_type",
+            "named": true
+          },
+          {
+            "type": "short_vec_type",
+            "named": true
+          },
+          {
+            "type": "struct_defn",
+            "named": true
+          },
+          {
+            "type": "struct_member",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "type_alias_defn",
+            "named": true
+          },
+          {
+            "type": "type_path",
+            "named": true
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -3948,23 +5176,37 @@
             "named": true
           }
         ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "struct_body",
-          "named": true
-        }
-      ]
     }
   },
   {
     "type": "struct_member",
     "named": true,
     "fields": {
+      "is_option": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "?",
+            "named": false
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -4024,11 +5266,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
-          "type": "ident_binding",
+          "type": "ident_list",
           "named": true
         }
       ]
@@ -4654,6 +5896,20 @@
             "named": true
           }
         ]
+      },
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "cwspec_block",
+            "named": true
+          },
+          {
+            "type": "cwspec_line",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -5123,6 +6379,14 @@
     "named": false
   },
   {
+    "type": "/**",
+    "named": false
+  },
+  {
+    "type": "///",
+    "named": false
+  },
+  {
     "type": "/=",
     "named": false
   },
@@ -5176,6 +6440,10 @@
   },
   {
     "type": "and",
+    "named": false
+  },
+  {
+    "type": "as",
     "named": false
   },
   {
@@ -5235,6 +6503,10 @@
     "named": false
   },
   {
+    "type": "from",
+    "named": false
+  },
+  {
     "type": "i128",
     "named": false
   },
@@ -5267,6 +6539,10 @@
     "named": false
   },
   {
+    "type": "import",
+    "named": false
+  },
+  {
     "type": "in",
     "named": false
   },
@@ -5281,6 +6557,10 @@
   {
     "type": "integer_val",
     "named": true
+  },
+  {
+    "type": "interface",
+    "named": false
   },
   {
     "type": "let",
