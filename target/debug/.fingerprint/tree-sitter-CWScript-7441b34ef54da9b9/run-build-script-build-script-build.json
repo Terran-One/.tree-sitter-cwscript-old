@@ -1,0 +1,1 @@
+{"rustc":15292915224124070443,"features":"","target":0,"profile":0,"path":0,"deps":[[17135060350826754283,"build_script_build",false,7811578022844080722]],"local":[{"RerunIfChanged":{"output":"debug/build/tree-sitter-CWScript-7441b34ef54da9b9/output","paths":["src/parser.c"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}
