@@ -3,4 +3,4 @@
 export builddir_name ?= ./build/.
 .PHONY: all
 all:
-	$(MAKE) tree_sitter_CWScript_binding
+	$(MAKE) tree_sitter_cwscript_binding

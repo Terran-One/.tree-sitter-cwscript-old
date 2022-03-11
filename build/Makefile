@@ -321,8 +321,8 @@ $(obj).$(TOOLSET)/%.o: $(obj)/%.S FORCE_DO_CMD
 
 ifeq ($(strip $(foreach prefix,$(NO_LOAD),\
     $(findstring $(join ^,$(prefix)),\
-                 $(join ^,tree_sitter_CWScript_binding.target.mk)))),)
-  include tree_sitter_CWScript_binding.target.mk
+                 $(join ^,tree_sitter_cwscript_binding.target.mk)))),)
+  include tree_sitter_cwscript_binding.target.mk
 endif
 
 quiet_cmd_regen_makefile = ACTION Regenerating $@
