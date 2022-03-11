@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-cwscript"
 description = "CWScript grammar for the tree-sitter parsing library"
-version = "0.0.1"
+version = "0.0.2"
 keywords = ["incremental", "parsing", "CWScript"]
 categories = ["parsing", "text-editors"]
 repository = "https://github.com/terran-one/tree-sitter-cwscript"
