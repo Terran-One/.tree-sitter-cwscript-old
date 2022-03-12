@@ -2,20 +2,8 @@ function csl(rule) {
   return seq(rule, repeat(seq(",", rule)));
 }
 
-function prefix(start, rule) {
-  return seq(start, rule);
-}
-
 function block(kw, item_rule) {
   return seq(kw, "{", repeat(item_rule), "}");
-}
-
-function prefix(start, ...elements) {
-  return seq(start, ...elements);
-}
-
-function cdr(...elements) {
-  return seq(...elements);
 }
 
 module.exports = grammar({
