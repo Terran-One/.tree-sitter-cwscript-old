@@ -1,41 +1,67 @@
-function csl(rule) {
-  return seq(rule, repeat(seq(",", rule)));
-}
+const _o = (x) => optional(x);
+const csl = (rule) => seq(rule, repeat(seq(",", rule)));
+const block = (kw, item_rule) => seq(kw, "{", repeat(item_rule), "}");
+const _ = (...x) => {
+  return seq(...x);
+};
+const _or = (...x) => choice(...x);
 
-function block(kw, item_rule) {
-  return seq(kw, "{", repeat(item_rule), "}");
-}
+const spec = ($) => field("spec", optional($.cwspec));
 
 module.exports = grammar({
   name: "cwscript",
+
+  extras: ($) => [/\s/, $.comment],
+  word: ($) => $.ident,
+  inline: ($) => [$.enum_variant],
+  supertypes: ($) => [
+    $.stmt,
+    $.expr,
+    $.val,
+    $.type_expr,
+    $.contract_item,
+    $.interface_item,
+  ],
 
   rules: {
     cwscript_src: ($) => repeat($._cws_item),
     _cws_item: ($) => choice($.contract_defn, $.interface_defn, $._import_stmt),
 
+    /** IGNOREABLE */
+    comment: ($) =>
+      token(
+        choice(seq("//", /.*/), seq("/*", /[^*]*\*+([^/*][^*]*\*+)*/, "/"))
+      ),
+    /** IGNOREABLE */
+
+    cwspec: ($) => repeat1($.cwspec_comment),
+    cwspec_comment: ($) =>
+      token(
+        choice(
+          seq("///", /[^\n]*/),
+          seq("/**", /[^*]*\*+([^/*][^*]*\*+)*/, "/")
+        )
+      ),
+
     contract_defn: ($) =>
       seq(
-        field("spec", optional($.cwspec)),
+        spec($),
         "contract",
         field("name", $.ident),
-        field("bases", optional(seq("extends", $.ident_list))),
-        field("interfaces", optional(seq("implements", $.ident_list))),
+        // field("bases", _o(seq("extends", $.ident_list))),
+        // field("interfaces", _o(seq("implements", $.ident_list))),
         field("body", $.contract_body)
       ),
 
     contract_body: ($) => seq("{", repeat($.contract_item), "}"),
     interface_body: ($) => seq("{", repeat($.interface_item), "}"),
 
-    cwspec: ($) => choice($.cwspec_line, $.cwspec_block),
-    cwspec_line: ($) => repeat1(seq("///", /[^\n]*/)),
-    cwspec_block: ($) => repeat1(seq("/**", /[^*]*\*+([^/*][^*]*\*+)*/, "/")),
-
     interface_defn: ($) =>
       seq(
-        field("spec", optional($.cwspec)),
+        spec($),
         "interface",
         field("name", $.ident),
-        field("bases", optional(seq("extends", $.ident_list))),
+        field("bases", _o(seq("extends", $.ident_list))),
         field("body", $.interface_body)
       ),
 
@@ -53,16 +79,10 @@ module.exports = grammar({
       ),
 
     import_list: ($) =>
-      choice(
-        seq("(", csl($.import_item), optional(","), ")"),
-        csl($.import_item)
-      ),
+      choice(seq("(", csl($.import_item), _o(","), ")"), csl($.import_item)),
 
     import_item: ($) =>
-      seq(
-        field("symbol", $.ident),
-        optional(seq("as", field("alias", $.ident)))
-      ),
+      seq(field("symbol", $.ident), _o(seq("as", field("alias", $.ident)))),
 
     error_block: ($) => block("error", $.error_block_item),
     event_block: ($) => block("event", $.event_block_item),
@@ -84,7 +104,7 @@ module.exports = grammar({
         $.exec_defn,
         $.query_defn,
         $.migrate_defn,
-        $._type_defn
+        $.type_defn
       ),
 
     interface_item: ($) =>
@@ -101,31 +121,23 @@ module.exports = grammar({
         $.exec_decl,
         $.query_decl,
         $.migrate_decl,
-        $._type_defn
+        $.type_defn
       ),
 
-    error_block_item: ($) =>
-      seq(field("spec", optional($.cwspec)), $._enum_variant),
-    event_block_item: ($) =>
-      seq(field("spec", optional($.cwspec)), $._enum_variant),
-    exec_block_item: ($) =>
-      seq(field("spec", optional($.cwspec)), $._named_fn_decl),
-    query_block_item: ($) =>
-      seq(field("spec", optional($.cwspec)), $._named_fn_decl),
+    error_block_item: ($) => seq(spec($), $.enum_variant),
+    event_block_item: ($) => seq(spec($), $.enum_variant),
+    exec_block_item: ($) => seq(spec($), $._named_fn_decl),
+    query_block_item: ($) => seq(spec($), $._named_fn_decl),
 
-    error_defn: ($) =>
-      seq(field("spec", optional($.cwspec)), "error", $._enum_variant),
-    event_defn: ($) =>
-      seq(field("spec", optional($.cwspec)), "event", $._enum_variant),
+    error_defn: ($) => seq(spec($), "error", $._enum_variant),
+    event_defn: ($) => seq(spec($), "event", $._enum_variant),
 
     // a bit confusing how there are _state_defn and state_defn..
     // I'm just using this one for the single-state-defn case
-    state_defn: ($) =>
-      seq(field("spec", optional($.cwspec)), "state", $._state_defn),
+    state_defn: ($) => seq(spec($), "state", $._state_defn),
     // I omit the "state" keyword here because it's implied by the block
     // I know this is a bit misleading, but th
-    state_block_item: ($) =>
-      seq(field("spec", optional($.cwspec)), $._state_defn),
+    state_block_item: ($) => seq(spec($), $._state_defn),
     _state_defn: ($) => choice($.state_item, $.state_map),
     state_item: ($) =>
       seq(field("key", $.ident), ":", field("type", $.type_expr)),
@@ -139,7 +151,7 @@ module.exports = grammar({
     map_key: ($) =>
       seq(
         "[",
-        optional(seq(field("key_name", $.ident), ":")),
+        _o(seq(field("key_name", $.ident), ":")),
         field("key_type", $.type_expr),
         "]"
       ),
@@ -148,55 +160,47 @@ module.exports = grammar({
       seq(
         field("name", $.ident),
         field("args", $.fn_args),
-        optional(seq("->", field("return_type", $.type_expr))),
+        _o(seq("->", field("return_type", $.type_expr))),
         field("body", $.fn_body)
       ),
     _fn_defn: ($) =>
       seq(
         field("args", $.fn_args),
-        optional(seq("->", field("return_type", $.type_expr))),
+        _o(seq("->", field("return_type", $.type_expr))),
         field("body", $.fn_body)
       ),
     _named_fn_decl: ($) =>
       seq(
         field("name", $.ident),
         field("args", $.fn_args),
-        optional(seq("->", field("return_type", $.type_expr)))
+        _o(seq("->", field("return_type", $.type_expr)))
       ),
     _fn_decl: ($) =>
       seq(
         field("args", $.fn_args),
-        optional(seq("->", field("return_type", $.type_expr)))
+        _o(seq("->", field("return_type", $.type_expr)))
       ),
 
-    instantiate_defn: ($) =>
-      seq(optional(field("spec", $.cwspec)), "instantiate", $._fn_defn),
-    instantiate_decl: ($) =>
-      seq(field("spec", optional($.cwspec)), "instantiate", $._fn_decl),
-    exec_defn: ($) =>
-      seq(field("spec", optional($.cwspec)), "exec", $._named_fn_defn),
-    exec_decl: ($) =>
-      seq(field("spec", optional($.cwspec)), "exec", $._named_fn_decl),
-    query_defn: ($) =>
-      seq(field("spec", optional($.cwspec)), "query", $._named_fn_defn),
-    query_decl: ($) =>
-      seq(field("spec", optional($.cwspec)), "query", $._named_fn_decl),
-    migrate_defn: ($) =>
-      seq(field("spec", optional($.cwspec)), "migrate", $._fn_defn),
-    migrate_decl: ($) =>
-      seq(field("spec", optional($.cwspec)), "migrate", $._fn_decl),
+    instantiate_defn: ($) => seq(spec($), "instantiate", $._fn_defn),
+    instantiate_decl: ($) => seq(spec($), "instantiate", $._fn_decl),
+    exec_defn: ($) => seq(spec($), "exec", $._named_fn_defn),
+    exec_decl: ($) => seq(spec($), "exec", $._named_fn_decl),
+    query_defn: ($) => seq(spec($), "query", $._named_fn_defn),
+    query_decl: ($) => seq(spec($), "query", $._named_fn_decl),
+    migrate_defn: ($) => seq(spec($), "migrate", $._fn_defn),
+    migrate_decl: ($) => seq(spec($), "migrate", $._fn_decl),
 
-    fn_args: ($) => seq("(", optional(csl($.fn_arg)), ")"),
+    fn_args: ($) => seq("(", _o(csl($.fn_arg)), ")"),
     fn_arg: ($) =>
       seq(
         field("name", $.ident),
-        field("option", optional("?")),
+        field("option", _o("?")),
         ":",
         field("type", $.type_expr)
       ),
-    fn_body: ($) => seq("{", repeat($._stmt), "}"),
+    fn_body: ($) => seq("{", repeat($.stmt), "}"),
 
-    _stmt: ($) =>
+    stmt: ($) =>
       choice(
         prec(5, $.let_stmt),
         prec(4, $.assign_stmt),
@@ -221,7 +225,7 @@ module.exports = grammar({
         $.and_expr,
         $.or_expr,
         $.query_expr,
-        $._val
+        $.val
       ),
 
     grouped_expr: ($) => prec(100, seq("(", $.expr, ")")),
@@ -281,14 +285,14 @@ module.exports = grammar({
 
     pos_args_fn_call_expr: ($) =>
       prec(85, seq(field("function", $.expr), field("args", $.pos_args))),
-    pos_args: ($) => prec(85, seq("(", optional(csl($.expr)), ")")),
+    pos_args: ($) => prec(85, seq("(", _o(csl($.expr)), ")")),
     named_args_fn_call_expr: ($) =>
       prec(90, seq(field("function", $.expr), field("args", $.named_args))),
 
-    named_args: ($) => prec(90, seq("(", optional(csl($.named_arg)), ")")),
+    named_args: ($) => prec(90, seq("(", _o(csl($.named_arg)), ")")),
     named_arg: ($) => seq(field("name", $.ident), ":", field("value", $.expr)),
 
-    _val: ($) =>
+    val: ($) =>
       choice(
         $.unit_val,
         $.struct_val,
@@ -307,12 +311,7 @@ module.exports = grammar({
       seq(
         field("type", $.type_expr),
         "{",
-        optional(
-          field(
-            "members_vals",
-            optional(seq(csl($.struct_val_member), optional(",")))
-          )
-        ),
+        _o(field("members_vals", _o(seq(csl($.struct_val_member), _o(","))))),
         "}"
       ),
     struct_val_member: ($) =>
@@ -321,10 +320,10 @@ module.exports = grammar({
       seq(
         field("type", $.type_expr),
         "(",
-        optional(field("member_vals", csl($.expr))),
+        _o(field("member_vals", csl($.expr))),
         ")"
       ),
-    vec_val: ($) => seq("[", optional(field("vals", csl($.expr))), "]"),
+    vec_val: ($) => seq("[", _o(field("vals", csl($.expr))), "]"),
     string_val: ($) => /"([^"\r\n\\]|(\\.))*"/,
     integer_val: ($) => /[0-9]+/,
     decimal_val: ($) => /[0-9]+\.[0-9]+/,
@@ -333,10 +332,7 @@ module.exports = grammar({
 
     _bindings: ($) => choice($.ident_binding, $.struct_unpack_binding),
     ident_binding: ($) =>
-      seq(
-        field("var_name", $.ident),
-        optional(seq(":", field("type", $.type_expr)))
-      ),
+      seq(field("var_name", $.ident), _o(seq(":", field("type", $.type_expr)))),
     struct_unpack_binding: ($) => seq("{", $.ident_list, "}"),
 
     let_stmt: ($) =>
@@ -347,7 +343,7 @@ module.exports = grammar({
       seq(
         field("if_clause", $.if_clause),
         field("else_if_clauses", repeat($.else_if_clause)),
-        field("else_clause", optional($.else_clause))
+        field("else_clause", _o($.else_clause))
       ),
 
     if_clause: ($) =>
@@ -372,9 +368,14 @@ module.exports = grammar({
     return_stmt: ($) => seq("return", field("arg", $.expr)),
     fail_stmt: ($) => seq("fail", field("arg", $.expr)),
 
-    _enum_variant: ($) => choice($._enum_variant_struct, $._enum_variant_tuple),
+    enum_variant: ($) =>
+      choice(
+        alias($._named_struct, $.named_struct),
+        alias($._named_tuple, $.named_tuple)
+      ),
+    _enum_variant: ($) => choice($._named_struct, $._named_tuple),
 
-    _enum_variant_struct: ($) =>
+    _named_struct: ($) =>
       prec(
         3,
         choice(
@@ -383,30 +384,28 @@ module.exports = grammar({
             choice(
               seq(
                 "{",
-                field(
-                  "members",
-                  optional(seq(csl($.struct_member), optional(",")))
-                ),
+                field("members", _o(seq(csl($.struct_member), _o(",")))),
                 "}"
               ),
-              seq("(", field("struct_members", csl($.struct_member)), ")")
+              seq("(", field("members", csl($.struct_member)), ")")
             )
           )
         )
       ),
-    _enum_variant_tuple: ($) =>
+    _named_tuple: ($) =>
       prec(
         2,
         seq(
           field("name", $.ident),
           "(",
-          field("tuple_members", optional(seq(csl($.type_expr)))),
+          field("members", _o(seq(csl($.type_expr)))),
           ")"
         )
       ),
 
     type_name: ($) => /[A-Z][a-zA-Z0-9_]*/,
-    ident: ($) => /[a-zA-Z_][a-zA-Z0-9_]*/,
+    ident: ($) => token(/[a-zA-Z_][a-zA-Z0-9_]*/),
+
     builtin_type: ($) =>
       choice(
         "bool",
@@ -428,35 +427,24 @@ module.exports = grammar({
     struct_member: ($) =>
       seq(
         field("name", $.ident),
-        field("is_option", optional("?")),
+        field("is_option", _o("?")),
         ":",
         field("type", $.type_expr)
       ),
 
-    tuple_type: ($) => seq("(", optional(csl($.type_expr)), ")"),
+    tuple_type: ($) => seq("(", _o(csl($.type_expr)), ")"),
     short_option_type: ($) => prec.left(50, seq($.type_expr, "?")),
     short_vec_type: ($) => prec.left(50, seq($.type_expr, "[]")),
-    _type_defn: ($) => choice($.struct_defn, $.enum_defn, $.type_alias_defn),
-    struct_defn: ($) =>
-      seq(
-        field("spec", optional($.cwspec)),
-        "struct",
-        choice($._enum_variant_struct, $._enum_variant_tuple)
-      ),
-    struct_body: ($) =>
-      seq("{", optional(seq(csl($.struct_member), optional(","))), "}"),
+    type_defn: ($) =>
+      seq(choice($.struct_defn, $.enum_defn, $.type_alias_defn)),
+    struct_defn: ($) => seq(spec($), "struct", $.enum_variant),
+    struct_body: ($) => seq("{", _o(seq(csl($.struct_member), _o(","))), "}"),
     enum_defn: ($) =>
-      seq(
-        field("spec", optional($.cwspec)),
-        "enum",
-        field("name", $.ident),
-        field("body", $.enum_body)
-      ),
-    enum_body: ($) =>
-      seq("{", optional(seq(csl($._enum_variant), optional(","))), "}"),
+      seq(spec($), "enum", field("name", $.ident), field("body", $.enum_body)),
+    enum_body: ($) => seq("{", _o(seq(csl($.enum_variant), _o(","))), "}"),
     type_alias_defn: ($) =>
       seq(
-        field("spec", optional($.cwspec)),
+        spec($),
         "type",
         field("alias", $.type_name),
         "=",
@@ -470,10 +458,11 @@ module.exports = grammar({
         $.tuple_type,
         $.short_vec_type,
         $.short_option_type,
-        $._type_defn,
+        $.type_defn,
         $.infer_type,
         $.builtin_type
       ),
-    type_path: ($) => seq($.type_name, repeat(seq("::", $.ident))),
+    type_path: ($) =>
+      seq(alias($.type_name, $.ident), repeat(seq("::", $.ident))),
   },
 });

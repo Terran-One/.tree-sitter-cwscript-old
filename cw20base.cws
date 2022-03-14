@@ -1,0 +1,75 @@
+contract CW20Base {    
+
+    error InvalidZeroAmount(Hello, There)
+    error Unauthorized()
+
+    event Transfer(sender: Addr, recipient: Addr, amount: Uint128)
+    event Burn(sender: Addr, amount: Uint128)
+    event Mint(minter: Addr, recipient: Addr, amount: Uint128)
+    event Send(sender: Addr, contract: Addr, amount: Uint128)
+
+    struct TokenInfo {
+        name: String,
+        symbol: String,
+        decimals: u8,
+        total_supply: Uint128,
+    }
+
+    state {
+        token_info: TokenInfo
+        balances[Addr]: Uint128
+    }
+    
+    instantiate(
+        name: String,
+        symbol: String,
+        decimals: u8,
+        initial_balances: struct Cw20Coin { address: Addr, amount: Uint128 }[],
+        mint?: String
+    ) {
+        let total_supply: Uint128 = Uint128(0)
+        for { address, amount } in initial_balances {
+            state.balances[address] += amount
+            total_supply += amount
+        }
+
+        state.token_info = TokenInfo {
+            name: name,
+            symbol: symbol,
+            decimals: decimals,
+            total_supply: total_supply,
+        }
+    }
+
+    exec transfer(recipient: Addr, amount: Uint128) {
+        state.balances[msg.sender] -= amount
+        state.balances[recipient] += amount
+        emit Transfer(msg.sender, recipient, amount)
+    }
+
+    exec burn(amount: Uint128) {
+        state.balances[msg.sender] -= amount
+        state.token_info.total_supply -= amount
+        emit Burn(msg.sender, amount)
+    }
+
+
+    exec send(contract_addr: Addr, amount: Uint128, msg: Binary) {
+        state.balances[msg.sender] -= amount
+        state.balances[contract_addr] += amount
+        emit Send(msg.sender, contract_addr, amount) 
+    }
+
+    query balance(address: Addr) -> struct BalanceResponse { balance: Uint128 } {
+        return _ {
+            balance: state.balances[address] or 0
+        }
+    }
+
+    query token_info() -> struct TokenInfoResponse { token_info: TokenInfo } {
+        return _ {
+            token_info: state.token_info
+        }
+    }
+
+}

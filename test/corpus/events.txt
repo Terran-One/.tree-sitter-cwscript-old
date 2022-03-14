@@ -1,0 +1,29 @@
+=================
+Event Definitions
+=================
+
+contract HasEvents {
+    event Tuple()
+    event Tuple(Uint128)
+    event Struct(a: Uint128)
+    event Struct(a: Uint128, b: Addr)
+}
+
+---
+
+(cwscript_src
+    (contract_defn
+        name: (ident)
+        body: (contract_body
+            (event_defn
+                name: (ident))
+            (event_defn
+                name: (ident)
+                members: (type_path (ident)))
+            (event_defn
+                name: (ident)
+                members: (struct_member name: (ident) type: (type_path (ident))))
+            (event_defn
+                name: (ident)
+                members: (struct_member name: (ident) type: (type_path (ident)))
+                members: (struct_member name: (ident) type: (type_path (ident)))))))

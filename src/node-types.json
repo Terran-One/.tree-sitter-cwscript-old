@@ -1,5 +1,313 @@
 [
   {
+    "type": "contract_item",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "error_block",
+        "named": true
+      },
+      {
+        "type": "error_defn",
+        "named": true
+      },
+      {
+        "type": "event_block",
+        "named": true
+      },
+      {
+        "type": "event_defn",
+        "named": true
+      },
+      {
+        "type": "exec_block",
+        "named": true
+      },
+      {
+        "type": "exec_defn",
+        "named": true
+      },
+      {
+        "type": "instantiate_defn",
+        "named": true
+      },
+      {
+        "type": "migrate_defn",
+        "named": true
+      },
+      {
+        "type": "query_block",
+        "named": true
+      },
+      {
+        "type": "query_defn",
+        "named": true
+      },
+      {
+        "type": "state_block",
+        "named": true
+      },
+      {
+        "type": "state_defn",
+        "named": true
+      },
+      {
+        "type": "type_defn",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "expr",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "add_sub_expr",
+        "named": true
+      },
+      {
+        "type": "and_expr",
+        "named": true
+      },
+      {
+        "type": "comparison_expr",
+        "named": true
+      },
+      {
+        "type": "equality_expr",
+        "named": true
+      },
+      {
+        "type": "grouped_expr",
+        "named": true
+      },
+      {
+        "type": "member_access_expr",
+        "named": true
+      },
+      {
+        "type": "mult_div_mod_expr",
+        "named": true
+      },
+      {
+        "type": "named_args_fn_call_expr",
+        "named": true
+      },
+      {
+        "type": "or_expr",
+        "named": true
+      },
+      {
+        "type": "pos_args_fn_call_expr",
+        "named": true
+      },
+      {
+        "type": "query_expr",
+        "named": true
+      },
+      {
+        "type": "table_lookup_expr",
+        "named": true
+      },
+      {
+        "type": "unary_neg_expr",
+        "named": true
+      },
+      {
+        "type": "unary_not_expr",
+        "named": true
+      },
+      {
+        "type": "val",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "interface_item",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "error_block",
+        "named": true
+      },
+      {
+        "type": "error_defn",
+        "named": true
+      },
+      {
+        "type": "event_block",
+        "named": true
+      },
+      {
+        "type": "event_defn",
+        "named": true
+      },
+      {
+        "type": "exec_block",
+        "named": true
+      },
+      {
+        "type": "exec_decl",
+        "named": true
+      },
+      {
+        "type": "instantiate_decl",
+        "named": true
+      },
+      {
+        "type": "migrate_decl",
+        "named": true
+      },
+      {
+        "type": "query_block",
+        "named": true
+      },
+      {
+        "type": "query_decl",
+        "named": true
+      },
+      {
+        "type": "state_block",
+        "named": true
+      },
+      {
+        "type": "state_defn",
+        "named": true
+      },
+      {
+        "type": "type_defn",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "stmt",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "assign_stmt",
+        "named": true
+      },
+      {
+        "type": "emit_stmt",
+        "named": true
+      },
+      {
+        "type": "exec_stmt",
+        "named": true
+      },
+      {
+        "type": "expr",
+        "named": true
+      },
+      {
+        "type": "fail_stmt",
+        "named": true
+      },
+      {
+        "type": "for_stmt",
+        "named": true
+      },
+      {
+        "type": "if_stmt",
+        "named": true
+      },
+      {
+        "type": "let_stmt",
+        "named": true
+      },
+      {
+        "type": "return_stmt",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "type_expr",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "builtin_type",
+        "named": true
+      },
+      {
+        "type": "infer_type",
+        "named": true
+      },
+      {
+        "type": "short_option_type",
+        "named": true
+      },
+      {
+        "type": "short_vec_type",
+        "named": true
+      },
+      {
+        "type": "tuple_type",
+        "named": true
+      },
+      {
+        "type": "type_defn",
+        "named": true
+      },
+      {
+        "type": "type_path",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "val",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "decimal_val",
+        "named": true
+      },
+      {
+        "type": "false",
+        "named": false
+      },
+      {
+        "type": "ident",
+        "named": true
+      },
+      {
+        "type": "integer_val",
+        "named": true
+      },
+      {
+        "type": "none_val",
+        "named": true
+      },
+      {
+        "type": "string_val",
+        "named": true
+      },
+      {
+        "type": "struct_val",
+        "named": true
+      },
+      {
+        "type": "true",
+        "named": false
+      },
+      {
+        "type": "tuple_struct_val",
+        "named": true
+      },
+      {
+        "type": "unit_val",
+        "named": true
+      },
+      {
+        "type": "vec_val",
+        "named": true
+      }
+    ]
+  },
+  {
     "type": "add_sub_expr",
     "named": true,
     "fields": {
@@ -178,20 +486,6 @@
     "type": "contract_defn",
     "named": true,
     "fields": {
-      "bases": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "extends",
-            "named": false
-          },
-          {
-            "type": "ident_list",
-            "named": true
-          }
-        ]
-      },
       "body": {
         "multiple": false,
         "required": true,
@@ -199,20 +493,6 @@
           {
             "type": "contract_body",
             "named": true
-          }
-        ]
-      },
-      "interfaces": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "ident_list",
-            "named": true
-          },
-          {
-            "type": "implements",
-            "named": false
           }
         ]
       },
@@ -236,77 +516,6 @@
           }
         ]
       }
-    }
-  },
-  {
-    "type": "contract_item",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "enum_defn",
-          "named": true
-        },
-        {
-          "type": "error_block",
-          "named": true
-        },
-        {
-          "type": "error_defn",
-          "named": true
-        },
-        {
-          "type": "event_block",
-          "named": true
-        },
-        {
-          "type": "event_defn",
-          "named": true
-        },
-        {
-          "type": "exec_block",
-          "named": true
-        },
-        {
-          "type": "exec_defn",
-          "named": true
-        },
-        {
-          "type": "instantiate_defn",
-          "named": true
-        },
-        {
-          "type": "migrate_defn",
-          "named": true
-        },
-        {
-          "type": "query_block",
-          "named": true
-        },
-        {
-          "type": "query_defn",
-          "named": true
-        },
-        {
-          "type": "state_block",
-          "named": true
-        },
-        {
-          "type": "state_defn",
-          "named": true
-        },
-        {
-          "type": "struct_defn",
-          "named": true
-        },
-        {
-          "type": "type_alias_defn",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -341,29 +550,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "cwspec_block",
-          "named": true
-        },
-        {
-          "type": "cwspec_line",
+          "type": "cwspec_comment",
           "named": true
         }
       ]
     }
-  },
-  {
-    "type": "cwspec_block",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "cwspec_line",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "else_clause",
@@ -415,59 +610,20 @@
   {
     "type": "enum_body",
     "named": true,
-    "fields": {
-      "members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "struct_member",
-            "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      },
-      "struct_members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "struct_member",
-            "named": true
-          }
-        ]
-      },
-      "tuple_members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "type_expr",
-            "named": true
-          }
-        ]
-      }
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "named_struct",
+          "named": true
+        },
+        {
+          "type": "named_tuple",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -565,30 +721,6 @@
     "type": "error_block_item",
     "named": true,
     "fields": {
-      "members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "struct_member",
-            "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      },
       "spec": {
         "multiple": false,
         "required": false,
@@ -598,35 +730,21 @@
             "named": true
           }
         ]
-      },
-      "struct_members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "struct_member",
-            "named": true
-          }
-        ]
-      },
-      "tuple_members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "type_expr",
-            "named": true
-          }
-        ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "named_struct",
+          "named": true
+        },
+        {
+          "type": "named_tuple",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -644,6 +762,10 @@
           {
             "type": "struct_member",
             "named": true
+          },
+          {
+            "type": "type_expr",
+            "named": true
           }
         ]
       },
@@ -663,34 +785,6 @@
         "types": [
           {
             "type": "cwspec",
-            "named": true
-          }
-        ]
-      },
-      "struct_members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "struct_member",
-            "named": true
-          }
-        ]
-      },
-      "tuple_members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "type_expr",
             "named": true
           }
         ]
@@ -716,30 +810,6 @@
     "type": "event_block_item",
     "named": true,
     "fields": {
-      "members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "struct_member",
-            "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      },
       "spec": {
         "multiple": false,
         "required": false,
@@ -749,35 +819,21 @@
             "named": true
           }
         ]
-      },
-      "struct_members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "struct_member",
-            "named": true
-          }
-        ]
-      },
-      "tuple_members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "type_expr",
-            "named": true
-          }
-        ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "named_struct",
+          "named": true
+        },
+        {
+          "type": "named_tuple",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -795,6 +851,10 @@
           {
             "type": "struct_member",
             "named": true
+          },
+          {
+            "type": "type_expr",
+            "named": true
           }
         ]
       },
@@ -814,34 +874,6 @@
         "types": [
           {
             "type": "cwspec",
-            "named": true
-          }
-        ]
-      },
-      "struct_members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "struct_member",
-            "named": true
-          }
-        ]
-      },
-      "tuple_members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "type_expr",
             "named": true
           }
         ]
@@ -1028,109 +1060,6 @@
     }
   },
   {
-    "type": "expr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "add_sub_expr",
-          "named": true
-        },
-        {
-          "type": "and_expr",
-          "named": true
-        },
-        {
-          "type": "comparison_expr",
-          "named": true
-        },
-        {
-          "type": "decimal_val",
-          "named": true
-        },
-        {
-          "type": "equality_expr",
-          "named": true
-        },
-        {
-          "type": "grouped_expr",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "integer_val",
-          "named": true
-        },
-        {
-          "type": "member_access_expr",
-          "named": true
-        },
-        {
-          "type": "mult_div_mod_expr",
-          "named": true
-        },
-        {
-          "type": "named_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "none_val",
-          "named": true
-        },
-        {
-          "type": "or_expr",
-          "named": true
-        },
-        {
-          "type": "pos_args_fn_call_expr",
-          "named": true
-        },
-        {
-          "type": "query_expr",
-          "named": true
-        },
-        {
-          "type": "string_val",
-          "named": true
-        },
-        {
-          "type": "struct_val",
-          "named": true
-        },
-        {
-          "type": "table_lookup_expr",
-          "named": true
-        },
-        {
-          "type": "tuple_struct_val",
-          "named": true
-        },
-        {
-          "type": "unary_neg_expr",
-          "named": true
-        },
-        {
-          "type": "unary_not_expr",
-          "named": true
-        },
-        {
-          "type": "unit_val",
-          "named": true
-        },
-        {
-          "type": "vec_val",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "fail_stmt",
     "named": true,
     "fields": {
@@ -1206,39 +1135,7 @@
       "required": false,
       "types": [
         {
-          "type": "assign_stmt",
-          "named": true
-        },
-        {
-          "type": "emit_stmt",
-          "named": true
-        },
-        {
-          "type": "exec_stmt",
-          "named": true
-        },
-        {
-          "type": "expr",
-          "named": true
-        },
-        {
-          "type": "fail_stmt",
-          "named": true
-        },
-        {
-          "type": "for_stmt",
-          "named": true
-        },
-        {
-          "type": "if_stmt",
-          "named": true
-        },
-        {
-          "type": "let_stmt",
-          "named": true
-        },
-        {
-          "type": "return_stmt",
+          "type": "stmt",
           "named": true
         }
       ]
@@ -1633,77 +1530,6 @@
     }
   },
   {
-    "type": "interface_item",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "enum_defn",
-          "named": true
-        },
-        {
-          "type": "error_block",
-          "named": true
-        },
-        {
-          "type": "error_defn",
-          "named": true
-        },
-        {
-          "type": "event_block",
-          "named": true
-        },
-        {
-          "type": "event_defn",
-          "named": true
-        },
-        {
-          "type": "exec_block",
-          "named": true
-        },
-        {
-          "type": "exec_decl",
-          "named": true
-        },
-        {
-          "type": "instantiate_decl",
-          "named": true
-        },
-        {
-          "type": "migrate_decl",
-          "named": true
-        },
-        {
-          "type": "query_block",
-          "named": true
-        },
-        {
-          "type": "query_decl",
-          "named": true
-        },
-        {
-          "type": "state_block",
-          "named": true
-        },
-        {
-          "type": "state_defn",
-          "named": true
-        },
-        {
-          "type": "struct_defn",
-          "named": true
-        },
-        {
-          "type": "type_alias_defn",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "let_stmt",
     "named": true,
     "fields": {
@@ -1972,6 +1798,66 @@
         "types": [
           {
             "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "named_struct",
+    "named": true,
+    "fields": {
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "struct_member",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "named_tuple",
+    "named": true,
+    "fields": {
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "type_expr",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
             "named": true
           }
         ]
@@ -2411,30 +2297,6 @@
     "type": "struct_defn",
     "named": true,
     "fields": {
-      "members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "struct_member",
-            "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      },
       "spec": {
         "multiple": false,
         "required": false,
@@ -2444,35 +2306,21 @@
             "named": true
           }
         ]
-      },
-      "struct_members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "struct_member",
-            "named": true
-          }
-        ]
-      },
-      "tuple_members": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "type_expr",
-            "named": true
-          }
-        ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "named_struct",
+          "named": true
+        },
+        {
+          "type": "named_tuple",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -2690,7 +2538,7 @@
     }
   },
   {
-    "type": "type_expr",
+    "type": "type_defn",
     "named": true,
     "fields": {},
     "children": {
@@ -2698,23 +2546,7 @@
       "required": true,
       "types": [
         {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
           "type": "enum_defn",
-          "named": true
-        },
-        {
-          "type": "infer_type",
-          "named": true
-        },
-        {
-          "type": "short_option_type",
-          "named": true
-        },
-        {
-          "type": "short_vec_type",
           "named": true
         },
         {
@@ -2722,15 +2554,7 @@
           "named": true
         },
         {
-          "type": "tuple_type",
-          "named": true
-        },
-        {
           "type": "type_alias_defn",
-          "named": true
-        },
-        {
-          "type": "type_path",
           "named": true
         }
       ]
@@ -2746,10 +2570,6 @@
       "types": [
         {
           "type": "ident",
-          "named": true
-        },
-        {
-          "type": "type_name",
           "named": true
         }
       ]
@@ -2872,14 +2692,6 @@
     "named": false
   },
   {
-    "type": "/**",
-    "named": false
-  },
-  {
-    "type": "///",
-    "named": false
-  },
-  {
     "type": "/=",
     "named": false
   },
@@ -2948,8 +2760,16 @@
     "named": false
   },
   {
+    "type": "comment",
+    "named": true
+  },
+  {
     "type": "contract",
     "named": false
+  },
+  {
+    "type": "cwspec_comment",
+    "named": true
   },
   {
     "type": "decimal_val",
@@ -3025,10 +2845,6 @@
   },
   {
     "type": "if",
-    "named": false
-  },
-  {
-    "type": "implements",
     "named": false
   },
   {

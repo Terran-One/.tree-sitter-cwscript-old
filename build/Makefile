@@ -58,7 +58,7 @@ CFLAGS.host ?= $(CPPFLAGS_host) $(CFLAGS_host)
 CXX.host ?= g++
 CXXFLAGS.host ?= $(CPPFLAGS_host) $(CXXFLAGS_host)
 LINK.host ?= $(CXX.host)
-LDFLAGS.host ?=
+LDFLAGS.host ?= $(LDFLAGS_host)
 AR.host ?= ar
 
 # Define a dir function that can handle spaces.
@@ -326,8 +326,8 @@ ifeq ($(strip $(foreach prefix,$(NO_LOAD),\
 endif
 
 quiet_cmd_regen_makefile = ACTION Regenerating $@
-cmd_regen_makefile = cd $(srcdir); /Users/william/.nvm/versions/node/v16.8.0/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/Users/william/Library/Caches/node-gyp/16.8.0" "-Dnode_gyp_dir=/Users/william/.nvm/versions/node/v16.8.0/lib/node_modules/npm/node_modules/node-gyp" "-Dnode_lib_file=/Users/william/Library/Caches/node-gyp/16.8.0/<(target_arch)/node.lib" "-Dmodule_root_dir=/Users/william/t1/tree-sitter-cwscript" "-Dnode_engine=v8" "--depth=." "-Goutput_dir=." "--generator-output=build" -I/Users/william/t1/tree-sitter-cwscript/build/config.gypi -I/Users/william/.nvm/versions/node/v16.8.0/lib/node_modules/npm/node_modules/node-gyp/addon.gypi -I/Users/william/Library/Caches/node-gyp/16.8.0/include/node/common.gypi "--toplevel-dir=." binding.gyp
-Makefile: $(srcdir)/build/config.gypi $(srcdir)/binding.gyp $(srcdir)/../../.nvm/versions/node/v16.8.0/lib/node_modules/npm/node_modules/node-gyp/addon.gypi $(srcdir)/../../Library/Caches/node-gyp/16.8.0/include/node/common.gypi
+cmd_regen_makefile = cd $(srcdir); /Users/william/.nvm/versions/node/v17.2.0/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/Users/william/Library/Caches/node-gyp/17.2.0" "-Dnode_gyp_dir=/Users/william/.nvm/versions/node/v17.2.0/lib/node_modules/npm/node_modules/node-gyp" "-Dnode_lib_file=/Users/william/Library/Caches/node-gyp/17.2.0/<(target_arch)/node.lib" "-Dmodule_root_dir=/Users/william/t1/cwsc-py/tree-sitter-cwscript" "-Dnode_engine=v8" "--depth=." "-Goutput_dir=." "--generator-output=build" -I/Users/william/t1/cwsc-py/tree-sitter-cwscript/build/config.gypi -I/Users/william/.nvm/versions/node/v17.2.0/lib/node_modules/npm/node_modules/node-gyp/addon.gypi -I/Users/william/Library/Caches/node-gyp/17.2.0/include/node/common.gypi "--toplevel-dir=." binding.gyp
+Makefile: $(srcdir)/../../../.nvm/versions/node/v17.2.0/lib/node_modules/npm/node_modules/node-gyp/addon.gypi $(srcdir)/../../../Library/Caches/node-gyp/17.2.0/include/node/common.gypi $(srcdir)/binding.gyp $(srcdir)/build/config.gypi
 	$(call do_cmd,regen_makefile)
 
 # "all" is a concatenation of the "all" targets from all the included
