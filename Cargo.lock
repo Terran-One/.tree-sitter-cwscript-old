@@ -52,7 +52,7 @@ dependencies = [
 
 [[package]]
 name = "tree-sitter-cwscript"
-version = "0.0.2"
+version = "0.0.5"
 dependencies = [
  "cc",
  "tree-sitter",
